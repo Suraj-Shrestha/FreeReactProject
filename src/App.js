@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
-import Joke from './components/Joke';
-import JokesData from './components/JokesData';
+import Product from './components/Product';
+import todosData from './components/ToDosData';
+import TodoItem from './components/TodoItem';
 
 const App = () => {
-const jokeComponents = JokesData.map(joke => <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine}/>)
-
-  
+  const todoItems = todosData.map(item => <TodoItem key={item.id} item={item}/>)
   return (
     <div>
-      {jokeComponents}
+        {todoItems}
     </div>
-  );
+  )
 }
+ 
 export default App;
